@@ -73,3 +73,34 @@ a. 在where添加常用列上都加上索引
 误：cat_id上，和price上都加上索引
 错：只能用上cat_id或price索引，因为是独立索引，同时只能用上1个
 ```
+
+
+#    
+1. limit 及翻页优化  
+```
+limit offset,N, 当offset非常大时，效率极低，
+原因是mysql并不是跳过offset行，然后单取N行，
+而是取offset+N行，返回放弃前offset行，返回N行。
+效率较低，当offset越大时，效率越低。
+```
+优化办法：
+> 1. 从业务上去解决  
+```
+办法：不允许翻过100页
+以百度为例，一般翻页到70页左右
+```
+> 2. 不用offset,用条件查询   
+```
+例：
+/*前提条件，数据不进行物理删除，只进行逻辑删除*/
+select id, name from user limit 10000000, 10;
+优化为：
+select id, name from user where id>10000000, 10
+```
+> 3. 查索引优化  
+```
+select * from user
+inner join 
+( select id from user limit 10000000, 10) as tmp
+on user.id = tmp.id
+```
