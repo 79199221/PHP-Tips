@@ -77,6 +77,7 @@ b. left join
 c. inner join
 ```
 
+> 7. 
 
 
 
