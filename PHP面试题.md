@@ -75,13 +75,15 @@ select * from login where name like '%name%' order by id limit 10;
 a. right join
 b. left join
 c. inner join
-d. index
+d. index：
 ```
 
-> 7. 
+> 7. 简述论坛中无限分类的实现原理。   
+```
 
+```
 
-
+> 8. 
 
 
 
