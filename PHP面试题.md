@@ -88,7 +88,6 @@ d. index：
 ```
 $str = 'http://www.test.com/a/b/c/index.php?a=b&c=d';
 $arr = parse_url($str);
-
 $path = pathinfo($arr['path']);
 ```
 
