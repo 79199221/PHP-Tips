@@ -75,6 +75,7 @@ select * from login where name like '%name%' order by id limit 10;
 a. right join
 b. left join
 c. inner join
+d. index
 ```
 
 > 7. 
