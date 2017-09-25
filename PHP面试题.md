@@ -92,7 +92,24 @@ $path = pathinfo($arr['path']);
 echo $path['extension'];
 ```
 
+> 9. 解释：MVC  
+```
 
+```
+
+> 10. 描述一下大流量高并发量网站的解决方案
+```
+a. lvs或nginx负载均衡器
+b. squid缓存或nginx web cache 缓存
+c. web服务器选型（ngnix代替apache）
+d. php代码静态化（smarty或框架）
+e. sphinx
+f. memche
+g. sql语句一定要注意索引使用
+h. 主从分流
+i. 分库分表或分区
+j. 磁盘分布（raid0+raid1）
+```
 
 
 
