@@ -83,8 +83,13 @@ d. index：
 
 ```
 
-> 8. 
+> 8. 写一个函数，尽可能高效的，从一个标准url里取出文件的扩展名   
+> 例如：http://www.test.com/a/b/c/index.php?a=b&c=d   
+```
+$arr = parse_url($str);
 
+$path = pathinfo($arr['path']);
+```
 
 
 
