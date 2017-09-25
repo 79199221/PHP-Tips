@@ -71,7 +71,11 @@ select * from login where name like '%name%' order by id limit 10;
 ```
 
 > 6. 解释：左连接、右连接、内连接、索引。  
-
+```
+a. right join
+b. left join
+c. inner join
+```
 
 
 
