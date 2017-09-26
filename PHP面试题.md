@@ -109,6 +109,15 @@ g. sql语句一定要注意索引使用
 h. 主从分流
 i. 分库分表或分区
 j. 磁盘分布（raid0+raid1）
+A. dns 负载均衡
+B. 负载均衡器
+C. 集群服务器
+D. web服务器采用nginx
+E. 静态缓存（TP, Smarty）
+F. 文件数据缓存（TP）
+G. 内存数据缓存（Memcache, Redis）
+H. 给数据库加索引
+I. 磁盘阵列技术
 ```
 
 
