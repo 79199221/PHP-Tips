@@ -128,8 +128,15 @@ c. 数据库优化（分库分表或分区）
 d. 服务器优化（四种字符集，主从mysql）
 ```
 
-
-
+> 12. 如何进行防SQL注入
+```
+//表单尽量用POST提交，核心用户验证都走POST，避开GET
+a. 表单尽量用POST，表单判断控制走GET，因为GET比POST速度快
+b. $_SERVER[HTTP_REFERER]判断
+c. 开启addslashes，在' , ",\头加\
+d. 密码一定设置md5加密
+e. 服务器本身的安全（web+mysql）
+```
 
 
 
